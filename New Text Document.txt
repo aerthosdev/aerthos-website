@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aerthos - Official Website</title>
+    <!-- Tailwind CSS CDN for utility-first styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Cinzel for headings, Cormorant Garamond for body text (matching game aesthetic) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* --- Custom Styles for the Mythbound Codex Theme --- */
+        body {
+            /* Parchment texture for the background, matching the game's feel */
+            background-color: #f5eeda;
+            background-image: url(https://www.transparenttextures.com/patterns/old-paper-2.png);
+            font-family: 'Cormorant Garamond', serif; /* Default narrative font */
+            color: #4a2c2a; /* Umber ink color for text */
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, strong {
+            font-family: 'Cinzel', serif; /* Headings and important text in Cinzel */
+            color: #6b4f3a; /* Dark brown for headings */
+        }
+
+        .codex-section {
+            background-image: url(https://www.transparenttextures.com/patterns/old-paper-2.png);
+            background-color: #fdf6e3; /* Clean parchment background for content blocks */
+            border: 3px solid #6b4f3a; /* Dark brown border */
+            max-width: 1000px; /* Max width for content */
+            margin: 2.5vh auto; /* Vertical margin, horizontal auto-center */
+            padding: 2.5em; /* Ample padding */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 25px rgba(0, 0, 0, 0.2); /* Outer and Inner Shadow */
+            border-radius: 4px; /* Slightly rounded corners */
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .codex-section {
+                margin: 0; /* No vertical margin on mobile */
+                border-radius: 0; /* No rounded corners on mobile */
+                border-left: none; /* No side borders on mobile */
+                border-right: none;
+                padding: 1.5em 1em; /* Reduced padding for more content space */
+            }
+            h1 {
+                font-size: 2.5rem; /* Adjust font size for mobile */
+            }
+            h2 {
+                font-size: 2rem;
+            }
+        }
+
+        .btn-primary {
+            background-color: #856d5b; /* A warm, earthy brown */
+            color: #fdf6e3; /* Light parchment color for text */
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 1px solid #6b4f3a;
+        }
+
+        .btn-primary:hover {
+            background-color: #6b4f3a; /* Darker brown on hover */
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .feature-card {
+            background-color: rgba(181, 152, 127, 0.1); /* Slightly transparent brown */
+            border: 1px solid rgba(133, 109, 91, 0.4);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature-card i {
+            color: #856d5b; /* Icon color */
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+    <!-- Boxicons for icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body class="antialiased">
+
+    <!-- Navigation Bar -->
+    <nav class="codex-section flex justify-between items-center py-4 px-6 mb-4">
+        <h1 class="text-3xl font-bold">Aerthos</h1>
+        <div class="space-x-4">
+            <a href="#about" class="hover:underline">About</a>
+            <a href="#features" class="hover:underline">Features</a>
+            <a href="#world" class="hover:underline">The World</a>
+            <a href="#" class="btn-primary">Play Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="codex-section text-center py-16 md:py-24">
+        <h1 class="text-5xl md:text-6xl font-bold mb-4 leading-tight">Embark on Your Own Epic Tale</h1>
+        <p class="text-xl md:text-2xl italic mb-8">A Browser-Based Gamebook RPG</p>
+        <p class="max-w-3xl mx-auto text-lg mb-10">
+            Dive into Aerthos, a world shaped by your choices. Unravel mysteries, engage in tactical combat, and forge your destiny in this immersive text-based adventure. Every decision matters.
+        </p>
+        <a href="#" class="btn-primary text-xl">Begin Your Journey</a>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="codex-section py-16">
+        <h2 class="text-4xl font-bold text-center mb-10">About Aerthos</h2>
+        <div class="max-w-4xl mx-auto text-lg">
+            <p class="mb-6">
+                Aerthos is a unique blend of classic gamebook storytelling and modern RPG mechanics, all playable directly in your web browser. You are the hero of your own saga, navigating rich narratives, making pivotal decisions, and developing your character through a deep progression system. Forget complex downloads; simply open your browser and step into a world waiting to be explored.
+            </p>
+            <p class="mb-6">
+                Inspired by the golden age of interactive fiction, Aerthos offers a compelling experience where your intellect and strategic thinking are as vital as your character's strength. Will you be a cunning rogue, a wise mage, or a mighty warrior? The path is yours to define.
+            </p>
+            <p>
+                The game features a dynamic combat system, intricate skill trees, a robust inventory, and a living world that reacts to your actions. Prepare for an adventure where your imagination is your greatest asset.
+            </p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="codex-section py-16">
+        <h2 class="text-4xl font-bold text-center mb-10">Key Features</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div class="feature-card">
+                <i class='bx bxs-book-reader'></i>
+                <h3 class="text-2xl font-bold mb-2">Immersive Gamebook Narrative</h3>
+                <p>Experience a story driven by your choices, with branching paths and meaningful consequences.</p>
+            </div>
+            <div class="feature-card">
+                <i class='bx bxs-sword'></i>
+                <h3 class="text-2xl font-bold mb-2">Strategic Turn-Based Combat</h3>
+                <p>Engage in tactical battles, utilizing skills, items, and companion abilities to overcome foes.</p>
+            </div>
+            <div class="feature-card">
+                <i class='bx bxs-user-detail'></i>
+                <h3 class="text-2xl font-bold mb-2">Deep Character Progression</h3>
+                <p>Customize your hero with attributes, diverse skill trees (Might, Arcanum, Subterfuge, etc.), and professions.</p>
+            </div>
+            <div class="feature-card">
+                <i class='bx bxs-backpack'></i>
+                <h3 class="text-2xl font-bold mb-2">Rich Inventory & Crafting</h3>
+                <p>Collect loot, manage your inventory, and craft powerful potions and equipment.</p>
+            </div>
+            <div class="feature-card">
+                <i class='bx bxs-group'></i>
+                <h3 class="text-2xl font-bold mb-2">Recruitable Companions</h3>
+                <p>Hire mercenaries and tame beasts to fight alongside you, each with unique strengths.</p>
+            </div>
+            <div class="feature-card">
+                <i class='bx bxs-map'></i>
+                <h3 class="text-2xl font-bold mb-2">Dynamic World Encounters</h3>
+                <p>Explore varied locations like Aethelgard, the Sewers, and the Whispering Forest, each with unique challenges.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- World Lore Section -->
+    <section id="world" class="codex-section py-16">
+        <h2 class="text-4xl font-bold text-center mb-10">The World of Aerthos</h2>
+        <div class="max-w-4xl mx-auto text-lg">
+            <p class="mb-6">
+                Aerthos is a realm steeped in ancient magic and forgotten histories. From the bustling streets of <strong>Aethelgard</strong>, the last bastion of civilization, to the perilous depths of the <strong>Whispering Forest</strong> and the treacherous <strong>Sunken Sewers</strong>, danger and opportunity lurk around every corner.
+            </p>
+            <p class="mb-6">
+                The land is scarred by past conflicts, and whispers of old gods and forgotten empires linger in the air. Brave adventurers will encounter a diverse array of creatures, from the cunning Goblins and fierce Kobolds to the majestic Dire Wolves and the elusive Vampire Bats. Each region presents its own unique challenges and rewards.
+            </p>
+            <p>
+                Will you uncover the secrets of Aerthos, or become another forgotten tale in its vast chronicles? The choice, as always, is yours.
+            </p>
+        </div>
+    </section>
+
+    <!-- Call to Action Footer -->
+    <footer class="codex-section text-center py-12 mt-8">
+        <h2 class="text-3xl font-bold mb-6">Ready to Write Your Legend?</h2>
+        <a href="#" class="btn-primary text-xl">Play Aerthos Now!</a>
+        <p class="mt-8 text-sm opacity-70">&copy; 2025 Aerthos. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

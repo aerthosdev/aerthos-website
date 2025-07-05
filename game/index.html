@@ -6,7 +6,104 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>Welcome to Aerthos</h1>
-  <p>Your journey begins...</p>
+
+<!-- Alpha Notice Overlay -->
+<div id="alpha-notice" style="
+  position:fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  background-color:#000;
+  color:#f5eeda;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  z-index:99999;
+  font-family:'Cinzel', serif;
+  text-align:center;
+  padding:2rem;
+">
+  <h1 style="font-size:2.5rem; margin-bottom:1rem;">⚠️ Aerthos is in Alpha</h1>
+  <p style="max-width:600px; font-size:1.2rem; line-height:1.6; margin-bottom:2rem;">
+    This game is currently under active development. Features may change, and progress may reset.
+    Thank you for exploring Aerthos in its early stage.
+  </p>
+  <button id="continue-to-core" class="btn-primary" style="
+    background-color:#856d5b;
+    color:#fdf6e3;
+    padding:0.75rem 2rem;
+    font-size:1.1rem;
+    border:none;
+    border-radius:0.5rem;
+    cursor:pointer;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    box-shadow:0 4px 6px rgba(0,0,0,0.3);
+    font-family:'Cinzel', serif;
+  ">
+    Continue to the Game
+  </button>
+</div>
+
+<!-- Aerthos Core Embed -->
+<section id="aerthos-core" style="
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  background:black;
+  z-index:9999;">
+  <iframe 
+    src="https://aerthos-core.netlify.app"
+    style="width:100%; height:100%; border:none;"
+    title="Aerthos Core"
+    allowfullscreen>
+  </iframe>
+</section>
+
+<!-- Logic to launch embedded core -->
+<script>
+  document.getElementById("continue-to-core").addEventListener("click", function () {
+    document.getElementById("aerthos-core").style.display = "block";
+    document.body.style.overflow = "hidden";
+    window.scrollTo(0, 0);
+  });
+</script>
+
+<!-- Button -->
+<button id="continue-to-core" style="...your styles here...">
+  Continue to the Game
+</button>
+
+<!-- Core Embed -->
+<section id="aerthos-core" style="display: none; position: fixed; ...">
+  <iframe src="https://aerthos-core.netlify.app" ...></iframe>
+</section>
+
+<!-- Script -->
+<script>
+  window.onload = function () {
+    const button = document.getElementById("continue-to-core");
+    const core = document.getElementById("aerthos-core");
+    const notice = document.getElementById("alpha-notice");
+
+    if (button && core && notice) {
+      button.addEventListener("click", function () {
+        notice.style.display = "none";
+        core.style.display = "block";
+        document.body.style.overflow = "hidden";
+        window.scrollTo(0, 0);
+      });
+    } else {
+      console.warn("Button, core, or notice element not found.");
+    }
+  };
+</script>
+
 </body>
 </html>

@@ -17,7 +17,8 @@
     <!-- Tailwind CSS CDN for utility-first styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Cinzel for headings, Cormorant Garamond for body text (matching game aesthetic) -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cinzel&family=Cormorant+Garamond&display=swap">
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Cinzel&family=Cormorant+Garamond&display=swap">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -131,18 +132,17 @@
     </style>
     <!-- Boxicons for icons -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <a href="#features" aria-label="Jump to Features section">Features</a>
 
 </head>
 
 <body class="antialiased">
 
     <!-- Navigation Bar -->
-    <nav class="codex-section flex justify-between items-center py-4 px-6 mb-4">
+    <nav class="codex-section flex flex-col md:flex-row md:justify-between items-center py-4 px-6 gap-4 md:gap-0">
         <h1 class="text-3xl font-bold">Aerthos</h1>
-        <div class="space-x-4">
+        <div class="flex flex-wrap justify-center gap-4">
             <a href="#about" class="hover:underline">About</a>
-            <a href="#features" class="hover:underline">Features</a>
+            <a href="#features" class="hover:underline">Fortunes</a>
             <a href="#world" class="hover:underline">The World</a>
             <a href="game/index.html" class="btn-primary">Play Now</a>
         </div>
@@ -156,7 +156,7 @@
             Dive into Aerthos, a world shaped by your choices. Unravel mysteries, engage in tactical combat, and forge
             your destiny in this immersive text-based adventure. Every decision matters.
         </p>
-        <a href="#" class="btn-primary text-xl">Begin Your Journey</a>
+        <a href="game/index.html" class="btn-primary text-xl">Begin Your Journey</a>
     </header>
 
     <!-- About Section -->
